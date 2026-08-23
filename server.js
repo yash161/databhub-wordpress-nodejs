@@ -22,12 +22,17 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Static files
-const publicDir = path.resolve(__dirname, 'public');
-const viewsDir = path.resolve(__dirname, 'views');
+const publicDirs = [
+  path.join(__dirname, 'public'),
+  path.join(process.cwd(), 'public'),
+  path.join(__dirname, '..', 'public')
+];
 
-app.use(express.static(publicDir, {
-  maxAge: process.env.NODE_ENV === 'production' ? '1y' : 0
-}));
+publicDirs.forEach(dir => {
+  app.use(express.static(dir, {
+    maxAge: process.env.NODE_ENV === 'production' ? '1y' : 0
+  }));
+});
 
 // View engine
 app.set('view engine', 'ejs');
