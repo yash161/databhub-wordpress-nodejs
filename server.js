@@ -22,13 +22,16 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Static files
-app.use(express.static(path.join(__dirname, 'public'), {
+const publicDir = path.resolve(__dirname, 'public');
+const viewsDir = path.resolve(__dirname, 'views');
+
+app.use(express.static(publicDir, {
   maxAge: process.env.NODE_ENV === 'production' ? '1y' : 0
 }));
 
 // View engine
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', viewsDir);
 app.use(expressLayouts);
 app.set('layout', 'layouts/main');
 
