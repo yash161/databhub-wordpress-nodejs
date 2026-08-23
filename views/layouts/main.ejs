@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= typeof title !== 'undefined' ? title : 'DataHub - Where Data Meets Innovation' %></title>
+  <meta name="description" content="<%= typeof metaDescription !== 'undefined' ? metaDescription : 'DataHub - IT Consulting & Solutions' %>">
+  <% if (typeof canonicalUrl !== 'undefined' && canonicalUrl) { %>
+  <link rel="canonical" href="<%= siteUrl %><%= canonicalUrl %>">
+  <% } %>
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="<%= typeof title !== 'undefined' ? title : 'DataHub' %>">
+  <meta property="og:description" content="<%= typeof metaDescription !== 'undefined' ? metaDescription : '' %>">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="<%= siteUrl %><%= currentPath %>">
+  <link rel="icon" type="image/png" href="/images/2022/12/cropped-logo-6-1.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="https://cdn.lordicon.com/lordicon.js"></script>
+  <% if (gaTrackingId) { %>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=<%= gaTrackingId %>"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','<%= gaTrackingId %>');</script>
+  <% } %>
+</head>
+<body>
+  <%- include('../partials/header') %>
+  <main>
+    <%- body %>
+  </main>
+  <%- include('../partials/footer') %>
+  <script src="/js/main.js"></script>
+</body>
+</html>

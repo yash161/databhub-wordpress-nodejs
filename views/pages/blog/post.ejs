@@ -1,0 +1,19 @@
+<!-- Blog Post -->
+<section style="background: var(--dark); padding: 40px 0; border-bottom: 1px solid rgba(10,101,255,0.15);">
+  <div class="container">
+    <div class="blog-post-date"><%= new Date(post.date).toLocaleDateString('en-US', {year: 'numeric', month: 'long', day: 'numeric'}) %></div>
+    <h1 class="blog-post-title"><%= post.title %></h1>
+    <a href="/news-blog" style="color: var(--primary); font-size: 14px;">← Back to Blog</a>
+  </div>
+</section>
+<div class="container">
+  <article class="blog-post fade-in">
+    <div class="blog-post-content">
+      <%- post.content.replace(/\n/g, "<br>") %>
+    </div>
+    <div style="margin-top: 50px; padding-top: 30px; border-top: 1px solid rgba(10,101,255,0.15);">
+      <a href="/news-blog" class="btn btn-outline">← Back to Blog</a>
+      <a href="/contact-2" class="btn btn-primary" style="margin-left: 15px;">Contact Us</a>
+    </div>
+  </article>
+</div>

@@ -1,0 +1,23 @@
+<!-- Blog Listing -->
+<section class="page-hero" style="background-image: url('/images/2023/02/shutterstock_381746308-scaled.jpg');">
+  <div class="container">
+    <h1 class="page-hero-title">News &amp; Blog</h1>
+    <p class="page-hero-subtitle">The latest in IT security, compliance, and innovation</p>
+  </div>
+</section>
+<section class="page-content">
+  <div class="container">
+    <div class="blog-grid">
+      <% posts.forEach(function(post) { %>
+      <div class="blog-card fade-in">
+        <div class="blog-card-body">
+          <div class="blog-card-date"><%= new Date(post.date).toLocaleDateString('en-US', {year: 'numeric', month: 'long', day: 'numeric'}) %></div>
+          <h4><a href="/<%= post.slug %>"><%= post.title %></a></h4>
+          <p><%= post.excerpt.replace(/&amp;/g,'&').replace(/&nbsp;/g,' ').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&#\d+;/g,'') %></p>
+          <a href="/<%= post.slug %>" class="read-more">Read More →</a>
+        </div>
+      </div>
+      <% }); %>
+    </div>
+  </div>
+</section>
