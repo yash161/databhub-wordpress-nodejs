@@ -35,6 +35,15 @@ publicDirs.forEach(dir => {
 });
 
 // View engine
+const fs = require('fs');
+let viewsDir = path.join(process.cwd(), 'views');
+if (!fs.existsSync(viewsDir)) {
+  viewsDir = path.join(__dirname, 'views');
+}
+if (!fs.existsSync(viewsDir)) {
+  viewsDir = path.join(__dirname, '..', 'views');
+}
+
 app.set('view engine', 'ejs');
 app.set('views', viewsDir);
 app.use(expressLayouts);

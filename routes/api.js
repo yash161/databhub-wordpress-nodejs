@@ -36,13 +36,20 @@ router.post('/contact', contactLimiter, (req, res) => {
     message: sanitize(message)
   };
 
-  // Log submission to file
-  const logDir = path.join(__dirname, '..', 'data', 'submissions');
-  if (!fs.existsSync(logDir)) {
-    fs.mkdirSync(logDir, { recursive: true });
+  // Log submission to file (with /tmp fallback for serverless)
+  try {
+    const logDir = path.join(process.cwd(), 'data', 'submissions');
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { recursive: true });
+    }
+    const logFile = path.join(logDir, 'contact-submissions.jsonl');
+    fs.appendFileSync(logFile, JSON.stringify(submission) + '\n');
+  } catch (fsErr) {
+    try {
+      const tmpLog = path.join('/tmp', 'contact-submissions.jsonl');
+      fs.appendFileSync(tmpLog, JSON.stringify(submission) + '\n');
+    } catch (_) {}
   }
-  const logFile = path.join(logDir, 'contact-submissions.jsonl');
-  fs.appendFileSync(logFile, JSON.stringify(submission) + '\n');
 
   console.log('Contact form submission:', submission);
 
