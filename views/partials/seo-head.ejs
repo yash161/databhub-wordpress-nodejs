@@ -1,0 +1,143 @@
+<%
+  // Shared SEO head tags: robots, Open Graph, Twitter Card and JSON-LD structured data
+  var pageTitle = typeof title !== 'undefined' ? title : 'DataHub - Where Data Meets Innovation';
+  var pageDesc = typeof metaDescription !== 'undefined' ? metaDescription : '';
+  var pagePath = (typeof canonicalUrl !== 'undefined' && canonicalUrl) ? canonicalUrl : currentPath;
+  var pageUrl = siteUrl + pagePath;
+  var pageSeo = seoData[pagePath] || {};
+  var isNoindex = (typeof noindex !== 'undefined' && noindex) || pageSeo.noindex;
+  var isPost = typeof post !== 'undefined' && post;
+  var ogImage = siteUrl + '/images/2023/01/Security-1080x608.jpg';
+  var orgId = siteUrl + '/#organization';
+
+  var organization = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    '@id': orgId,
+    name: 'DataHub',
+    alternateName: 'DataHub USA',
+    slogan: 'Where Data Meets Innovation',
+    description: 'DataHub is a Chicago-based systems integration firm providing GRC, data security, analytics, cloud adoption, DevOps and application development solutions.',
+    url: siteUrl + '/',
+    logo: siteUrl + '/images/2022/12/logo-6.png',
+    image: ogImage,
+    telephone: '+1-800-967-8028',
+    email: 'info1@datahubusa.com',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '119 W. Hubbard St, Suite 4E',
+      addressLocality: 'Chicago',
+      addressRegion: 'IL',
+      postalCode: '60654',
+      addressCountry: 'US'
+    },
+    openingHoursSpecification: [{
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '07:00',
+      closes: '21:00'
+    }],
+    contactPoint: [{
+      '@type': 'ContactPoint',
+      telephone: '+1-800-967-8028',
+      email: 'info1@datahubusa.com',
+      contactType: 'sales',
+      areaServed: ['US', 'GB'],
+      availableLanguage: 'English'
+    }],
+    areaServed: ['US', 'GB'],
+    knowsAbout: ['Governance, Risk and Compliance', 'Data Security', 'Zero Trust', 'Data Analytics', 'Cloud Adoption', 'Hybrid Cloud', 'DevOps', 'Application Development', 'IBM i (AS/400)', 'IBM Power', 'Red Hat'],
+    sameAs: [
+      'https://www.linkedin.com/company/datahubusa',
+      'https://twitter.com/databorgs',
+      'https://www.youtube.com/@datahub-usa'
+    ]
+  };
+
+  var website = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': siteUrl + '/#website',
+    url: siteUrl + '/',
+    name: 'DataHub',
+    publisher: { '@id': orgId }
+  };
+
+  // Breadcrumbs: Home > [menu section] > page, using the main navigation for the middle level
+  var crumbs = [{ name: 'Home', url: siteUrl + '/' }];
+  var crumbName = isPost ? post.title : pageTitle.split(/ \| | – |: /)[0];
+  if (pagePath !== '/') {
+    if (isPost) {
+      crumbs.push({ name: 'News / Blog', url: siteUrl + '/news-blog' });
+    } else {
+      navigation.forEach(function(item) {
+        if (item.url === pagePath) crumbName = item.label;
+        (item.children || []).forEach(function(child) {
+          if (child.url === pagePath) {
+            if (item.url === '#') crumbs.push({ name: item.label, url: null });
+            crumbName = child.label;
+          }
+        });
+      });
+    }
+    crumbs.push({ name: crumbName, url: pageUrl });
+  }
+  var breadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: crumbs.map(function(c, i) {
+      var el = { '@type': 'ListItem', position: i + 1, name: c.name };
+      if (c.url) el.item = c.url;
+      return el;
+    })
+  };
+
+  var schemas = [organization, website];
+  if (pagePath !== '/' && !isNoindex) schemas.push(breadcrumb);
+  if (isPost) {
+    var published = String(post.date).replace(' ', 'T');
+    schemas.push({
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: post.title,
+      description: pageDesc,
+      datePublished: published,
+      dateModified: published,
+      image: ogImage,
+      mainEntityOfPage: pageUrl,
+      author: { '@id': orgId },
+      publisher: { '@id': orgId }
+    });
+  }
+  if (pagePath === '/contact-2') {
+    schemas.push({
+      '@context': 'https://schema.org',
+      '@type': 'ContactPage',
+      url: pageUrl,
+      name: pageTitle,
+      about: { '@id': orgId }
+    });
+  }
+%>
+  <meta name="robots" content="<%= isNoindex ? 'noindex, follow' : 'index, follow, max-image-preview:large' %>">
+  <meta property="og:site_name" content="DataHub">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="<%= pageTitle %>">
+  <meta property="og:description" content="<%= pageDesc %>">
+  <meta property="og:type" content="<%= isPost ? 'article' : 'website' %>">
+  <meta property="og:url" content="<%= pageUrl %>">
+  <meta property="og:image" content="<%= ogImage %>">
+  <meta property="og:image:width" content="1080">
+  <meta property="og:image:height" content="608">
+  <meta property="og:image:alt" content="DataHub - Where Data Meets Innovation">
+  <% if (isPost) { %>
+  <meta property="article:published_time" content="<%= String(post.date).replace(' ', 'T') %>">
+  <% } %>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@databorgs">
+  <meta name="twitter:title" content="<%= pageTitle %>">
+  <meta name="twitter:description" content="<%= pageDesc %>">
+  <meta name="twitter:image" content="<%= ogImage %>">
+  <% schemas.forEach(function(schema) { %>
+  <script type="application/ld+json"><%- JSON.stringify(schema).replace(/</g, '\\u003c') %></script>
+  <% }); %>

@@ -80,7 +80,8 @@ app.use((req, res) => {
   res.status(404).render('errors/404', {
     title: 'Page Not Found - DataHub',
     metaDescription: '',
-    canonicalUrl: ''
+    canonicalUrl: '',
+    noindex: true
   });
 });
 
@@ -90,7 +91,8 @@ app.use((err, req, res, next) => {
   res.status(500).render('errors/404', {
     title: 'Server Error - DataHub',
     metaDescription: '',
-    canonicalUrl: ''
+    canonicalUrl: '',
+    noindex: true
   });
 });
 

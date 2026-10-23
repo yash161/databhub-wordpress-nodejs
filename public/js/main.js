@@ -74,6 +74,34 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  // --- Lead tracking: send GA4 events for calls, emails and CTA clicks (only when GA is configured) ---
+  function trackEvent(name, params) {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', name, params || {});
+    }
+  }
+
+  document.addEventListener('click', function(e) {
+    const link = e.target.closest('a');
+    if (!link) return;
+    const href = link.getAttribute('href') || '';
+    const location = link.getAttribute('data-cta') || window.location.pathname;
+    if (href.indexOf('tel:') === 0) {
+      trackEvent('click_to_call', { link_location: location });
+    } else if (href.indexOf('mailto:') === 0) {
+      trackEvent('click_to_email', { link_location: location });
+    } else if (link.hasAttribute('data-cta')) {
+      trackEvent('cta_click', { link_location: location });
+    }
+  });
+
+  // --- Prefill the contact form subject from ?service= (set by CTA buttons on service/industry pages) ---
+  const serviceParam = new URLSearchParams(window.location.search).get('service');
+  const subjectField = document.getElementById('contact-subject');
+  if (serviceParam && subjectField && !subjectField.value) {
+    subjectField.value = serviceParam.substring(0, 100) + ' inquiry';
+  }
+
   // --- Contact Form Handling ---
   const contactForms = document.querySelectorAll('.contact-form form');
   contactForms.forEach(function(form) {
@@ -136,6 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
             statusEl.textContent = 'Thank you! Your message has been sent. We will get back to you soon.';
             statusEl.className = 'form-status success';
           }
+          trackEvent('generate_lead', { form_id: form.id || 'contact-form', page_path: window.location.pathname });
           form.reset();
         } else {
           throw new Error(result.message || 'Failed to send message');
