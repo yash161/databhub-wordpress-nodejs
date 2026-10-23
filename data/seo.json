@@ -1,207 +1,210 @@
 {
   "/": {
-    "title": "Home | Where Data Meets Innovation - DataHub USA",
-    "description": "Datahub can assist with GRC solutions with experts ready. Data Security solutions, Cloud Adoption, Analytics and DevOps services.",
+    "title": "IT Consulting, GRC & Data Security Experts in Chicago | DataHub",
+    "description": "DataHub is a Chicago systems integrator delivering GRC, data security, cloud adoption, analytics and DevOps solutions. Talk to our experts today.",
     "canonical": "/"
   },
   "/our-mission": {
-    "title": "Our Mission | DataHub - Digital Transformation",
-    "description": "Our Mission is simple, by helping organizations unlock opportunities. DataHub's solutions can help organizations optimize their data.",
+    "title": "Our Mission | DataHub USA – Data & Digital Transformation",
+    "description": "DataHub helps organizations unlock opportunity by optimizing, securing and modernizing their data. Learn about our mission and how we work.",
     "canonical": "/our-mission"
   },
   "/core-values": {
-    "title": "Core Values | DataHub - Customer Focused",
-    "description": "Core Values are simple, team work, innovation, customer focused and integrity just to name a few.",
+    "title": "Core Values | DataHub USA – Teamwork, Innovation, Integrity",
+    "description": "Teamwork, innovation, customer focus and integrity guide every DataHub engagement. See the values behind our IT consulting and data solutions.",
     "canonical": "/core-values"
   },
   "/our-team": {
-    "title": "Our Team | DataHub | Data Solutions",
-    "description": "DataHub is a multi-faceted, skilled technology & IT solutions company providing premier solutions.",
+    "title": "Our Team | DataHub USA – Chicago IT & Data Consultants",
+    "description": "Meet the DataHub team: skilled technology and IT consultants delivering GRC, security, cloud and data solutions from Chicago and London.",
     "canonical": "/our-team"
   },
   "/giving-back": {
-    "title": "Giving Back | DataHub - St. Jude Cancer Research",
-    "description": "DataHub has long admired the efforts that St. Jude has put forth in fighting cancer and supporting children.",
+    "title": "Giving Back | DataHub Supports St. Jude Children's Research",
+    "description": "DataHub proudly supports St. Jude Children's Research Hospital in its fight against childhood cancer. Learn how our team gives back.",
     "canonical": "/giving-back"
   },
   "/riskgrc": {
-    "title": "Governance Risk & Compliance | DataHub - Compliance Support",
-    "description": "Companies need support when trying to protect their data and comply with standards and regulations.",
+    "title": "Governance, Risk & Compliance (GRC) Solutions | DataHub",
+    "description": "GRC solutions that scale and deliver value on day one. DataHub helps you protect data and comply with regulations. Talk to a GRC expert today.",
     "canonical": "/riskgrc"
   },
   "/security": {
-    "title": "Compliance and Data Security | DataHub Zero Trust",
-    "description": "Optimize your business operations with expert data management services related to security and compliance.",
+    "title": "Data Security & Zero Trust Solutions | DataHub",
+    "description": "Protect your most valuable assets with DataHub's data security, zero trust and compliance services, tailored to your business. Get in touch.",
     "canonical": "/security"
   },
   "/analytics": {
-    "title": "Analytics | DataHub - Predictive Solutions",
-    "description": "DataHub brings together different varieties of analytics such as predictive & prescriptive solutions.",
+    "title": "Data Analytics Services: Predictive & Prescriptive | DataHub",
+    "description": "Turn data into decisions with DataHub analytics: predictive and prescriptive solutions that uncover insight and drive growth. Contact our team.",
     "canonical": "/analytics"
   },
   "/cloud-adoption": {
-    "title": "Cloud Adoption | DataHub - Cloud Services",
-    "description": "The journey to the hybrid cloud is not a simple one. Workloads with cloud services need expert guidance.",
+    "title": "Cloud Adoption & Hybrid Cloud Migration Services | DataHub",
+    "description": "Move workloads to hybrid and multi-cloud with expert guidance. DataHub plans, migrates and optimizes your cloud journey. Talk to a cloud expert.",
     "canonical": "/cloud-adoption"
   },
   "/data-management": {
-    "title": "DevOps | DataHub - Multi Cloud Focus",
-    "description": "DataHub helps organizations with their DevOps focusing on automation, code generation, and cloud deployment.",
+    "title": "DevOps Consulting & Multi-Cloud Automation | DataHub",
+    "description": "DataHub DevOps services focus on automation, code generation and multi-cloud deployment so your teams ship faster and more reliably.",
     "canonical": "/data-management"
   },
   "/problem-solving": {
-    "title": "AI/ML Problem Solving | DataHub | Innovation Experts",
-    "description": "DataHub is a problem solving company. Our DataHub team engages with clients both from a business aspect as well as technical.",
+    "title": "AI/ML Problem Solving & Innovation Consulting | DataHub",
+    "description": "DataHub pairs business and technical experts to solve complex problems with AI and machine learning. Bring us your toughest data challenge.",
     "canonical": "/problem-solving"
   },
   "/application-development": {
-    "title": "Application Development | DataHub",
-    "description": "Custom application development services. Build, modify, and modernize applications for your business.",
+    "title": "Custom Application Development & Modernization | DataHub",
+    "description": "Custom application development to build, modify and modernize business apps across cloud, Java, .NET and Salesforce. Talk to DataHub today.",
     "canonical": "/application-development"
   },
   "/ibm-i-as400": {
-    "title": "IBM i (AS/400) | DataHub",
-    "description": "Expert IBM i AS/400 solutions and modernization services from DataHub.",
+    "title": "IBM i (AS/400) Support & Modernization Services | DataHub",
+    "description": "Expert IBM i (AS/400) support, migration and modernization services from DataHub. Keep critical workloads running while you modernize.",
     "canonical": "/ibm-i-as400"
   },
   "/ibm-power": {
-    "title": "IBM Power | DataHub",
-    "description": "IBM Power systems solutions and services from DataHub.",
+    "title": "IBM Power Systems Solutions & Services | DataHub",
+    "description": "IBM Power Systems consulting, implementation and support from DataHub, an IBM partner. Get performance, reliability and a clear upgrade path.",
     "canonical": "/ibm-power"
   },
   "/hybrid-cloud-with-red-hat": {
-    "title": "Hybrid Cloud with Red Hat | Simplify Your Investment",
-    "description": "DataHub simplifies your Red Hat investment with hybrid cloud lifecycle delivery, automation, and integration.",
+    "title": "Hybrid Cloud with Red Hat OpenShift & Ansible | DataHub",
+    "description": "DataHub simplifies your Red Hat investment with hybrid cloud lifecycle delivery, Ansible automation and integration. Talk to a Red Hat expert.",
     "canonical": "/hybrid-cloud-with-red-hat"
   },
   "/grc-consulting": {
-    "title": "GRC Consulting | DataHub",
-    "description": "Expert GRC consulting services from DataHub.",
+    "title": "GRC Consulting Services | DataHub",
+    "description": "GRC consulting from DataHub: assess risk, design controls and build a compliance program that scales with your business. Talk to our team.",
     "canonical": "/grc-consulting"
   },
   "/operation-risk-managment": {
-    "title": "Operation Risk Management | DataHub",
-    "description": "Operation Risk Management guidance and direction from DataHub experts.",
+    "title": "Operational Risk Management Consulting | DataHub",
+    "description": "Identify, measure and reduce operational risk with guidance from DataHub's operational risk management experts. Start a conversation.",
     "canonical": "/operation-risk-managment"
   },
   "/it-governance": {
-    "title": "IT Governance | DataHub",
-    "description": "IT Governance consulting and implementation services from DataHub.",
+    "title": "IT Governance Consulting & Implementation | DataHub",
+    "description": "Align IT with business goals. DataHub designs and implements IT governance frameworks, policies and controls that hold up under audit.",
     "canonical": "/it-governance"
   },
   "/internal-audit": {
-    "title": "Internal Audit | DataHub",
-    "description": "Internal Audit services and consulting from DataHub.",
+    "title": "Internal Audit Services & Consulting | DataHub",
+    "description": "DataHub internal audit services help you test controls, find gaps and prepare for regulators with confidence. Speak with our audit team.",
     "canonical": "/internal-audit"
   },
   "/financial-control-management": {
-    "title": "Financial Control Management | DataHub",
-    "description": "Financial Control Management framework services from DataHub.",
+    "title": "Financial Control Management Framework | DataHub",
+    "description": "Strengthen financial controls with DataHub's financial control management framework, from design to testing and ongoing monitoring.",
     "canonical": "/financial-control-management"
   },
   "/data-privacy": {
-    "title": "Data Privacy | DataHub",
-    "description": "Data privacy consulting and implementation services from DataHub.",
+    "title": "Data Privacy Consulting & Compliance | DataHub",
+    "description": "DataHub data privacy consulting helps you meet privacy regulations and industry rules while protecting customer trust. Talk to a privacy expert.",
     "canonical": "/data-privacy"
   },
   "/business-continuity-managment": {
-    "title": "Business Continuity Management | DataHub",
-    "description": "Business Continuity Management planning and implementation from DataHub.",
+    "title": "Business Continuity Management & Planning | DataHub",
+    "description": "Plan, test and maintain business continuity with DataHub so critical operations keep running when disruption hits. Talk to our team.",
     "canonical": "/business-continuity-managment"
   },
   "/regulatory-compliance-management": {
-    "title": "Regulatory Compliance Management | DataHub",
-    "description": "Regulatory compliance management consulting from DataHub experts.",
+    "title": "Regulatory Compliance Management Consulting | DataHub",
+    "description": "Stay ahead of changing regulations. DataHub regulatory compliance management keeps your controls, evidence and reporting audit-ready.",
     "canonical": "/regulatory-compliance-management"
   },
   "/banking": {
-    "title": "Banking | DataHub - Analytics and Security",
-    "description": "Banks are always going through changes through analytics, security, cloud performance and compliance.",
+    "title": "IT, Analytics & Security Solutions for Banking | DataHub",
+    "description": "DataHub helps banks modernize with analytics, data security, cloud performance and regulatory compliance. Talk to our banking experts.",
     "canonical": "/banking"
   },
   "/healthcare-3": {
-    "title": "Advancing Healthcare | HIPAA Security and Regulations",
-    "description": "Are you keeping your IT stack healthy? DataHub has experience with HIPAA security and regulations.",
+    "title": "Healthcare IT Security & HIPAA Compliance | DataHub",
+    "description": "Keep your healthcare IT stack healthy. DataHub brings HIPAA security, compliance and data expertise to healthcare organizations. Contact us.",
     "canonical": "/healthcare-3"
   },
   "/insurance": {
-    "title": "Insurance | DataHub - Technology Support",
-    "description": "Empower your business with IT security guides & solutions for insurance businesses.",
+    "title": "IT Security & Data Solutions for Insurance | DataHub",
+    "description": "Empower your insurance business with DataHub IT security, analytics and compliance solutions built for insurers. Speak with our team.",
     "canonical": "/insurance"
   },
   "/energy": {
-    "title": "Energy Resource and Industrial | DataHub Security",
-    "description": "Energy, Resources & Industrial companies need modern IT solutions for security and compliance.",
+    "title": "IT Security & Compliance for Energy and Industrials | DataHub",
+    "description": "Energy, resources and industrial companies rely on DataHub for modern IT security, compliance and data solutions. Speak with our team.",
     "canonical": "/energy"
   },
   "/manufacturing": {
-    "title": "Manufacturing Security and Automation | DataHub Data Experts",
-    "description": "AI rapid evolution is happening at the right time for manufacturing companies.",
+    "title": "Manufacturing Security, AI & Automation | DataHub",
+    "description": "Bring AI, automation and data security to manufacturing. DataHub helps manufacturers modernize safely. Talk to a manufacturing expert.",
     "canonical": "/manufacturing"
   },
   "/retail": {
-    "title": "Retail Security and Inventory Management | DataHub Experts",
-    "description": "With our knowledge and background with Retail Data. We can assist with Security, Analytics and more.",
+    "title": "Retail Data Security, Analytics & Inventory | DataHub",
+    "description": "DataHub helps retailers secure customer data, improve inventory management and act on analytics across stores and e-commerce.",
     "canonical": "/retail"
   },
   "/financial-services": {
-    "title": "Financial Services Data AI and Compliance | DataHub",
-    "description": "Financial Services for all your Data needs like compliance and regulations.",
+    "title": "Financial Services Data, AI & Compliance | DataHub",
+    "description": "DataHub delivers data, AI and compliance solutions for financial services firms facing complex regulations. Talk to our experts today.",
     "canonical": "/financial-services"
   },
   "/tellcumacation": {
-    "title": "Telecommunication Security | DataHub",
-    "description": "Telecommunication Security and building the infrastructure connecting the world.",
+    "title": "Telecommunications Security & Infrastructure | DataHub",
+    "description": "DataHub secures and modernizes the telecommunications infrastructure that connects the world, from networks to data and compliance.",
     "canonical": "/tellcumacation"
   },
   "/partners": {
-    "title": "DataHub IT Service Partners | Chicago & UK",
-    "description": "DataHub partner team offers best in class partners such as IBM, AWS, Microsoft and more.",
+    "title": "Technology Partners: IBM, AWS, Microsoft, Red Hat | DataHub",
+    "description": "DataHub partners with IBM, AWS, Microsoft, Red Hat, Cisco, Google Cloud and more to deliver best-in-class solutions from Chicago and the UK.",
     "canonical": "/partners"
   },
   "/contact-2": {
-    "title": "Contact Us Today | Cloud and Data Security Experts | DataHub",
-    "description": "Professional & Managed IT services & consulting providers in Chicago focused on data solutions.",
+    "title": "Contact DataHub | Chicago IT, Cloud & Data Security Experts",
+    "description": "Call (800) 967-8028 or send us a message. DataHub's Chicago and London teams help with GRC, data security, cloud and analytics projects.",
     "canonical": "/contact-2"
   },
   "/form": {
     "title": "Contact Form | DataHub",
-    "description": "Get in touch with DataHub for IT consulting and solutions.",
-    "canonical": "/form"
+    "description": "Get in touch with DataHub for IT consulting, GRC, data security and cloud solutions.",
+    "canonical": "/form",
+    "noindex": true
   },
   "/news-blog": {
-    "title": "Data Security Blog | IT Security News | DataHub",
-    "description": "The Compliance & data security world is always changing. Stay up to date on trends and news.",
+    "title": "Data Security & Compliance Blog | DataHub",
+    "description": "Insights on data security, compliance, cloud and IT modernization from the DataHub team. Stay current on regulations and technology trends.",
     "canonical": "/news-blog"
   },
   "/client-login": {
     "title": "Client Login | DataHub",
     "description": "DataHub client login portal.",
-    "canonical": "/client-login"
+    "canonical": "/client-login",
+    "noindex": true
   },
   "/landing-page": {
     "title": "DataHub | IT Solutions",
-    "description": "DataHub landing page for IT consulting and solutions.",
-    "canonical": "/landing-page"
+    "description": "DataHub IT consulting and solutions.",
+    "canonical": "/landing-page",
+    "noindex": true
   },
   "/transformation-hub": {
-    "title": "Transformation Hub | DataHub - Data Experts",
-    "description": "DataHub Transformation Hub for digital transformation consulting.",
+    "title": "Transformation Hub: Our Capabilities | DataHub",
+    "description": "Explore DataHub's capabilities across GRC, security, analytics, cloud, DevOps and application development in one place. Start a conversation.",
     "canonical": "/transformation-hub"
   },
   "/regulations-for-2023": {
-    "title": "Regulations For 2023 | DataHub - Compliance Experts",
-    "description": "DataHub is a Systems Integration firm that focuses on GRC. Compliance regulations for 2023.",
+    "title": "Compliance Regulations for 2023: What Changed | DataHub",
+    "description": "A closer look at the 2023 compliance and regulatory landscape from DataHub, a systems integration firm focused on GRC.",
     "canonical": "/regulations-for-2023"
   },
   "/the-transformation-of-mainframes-ibm-z-today-and-the-future-with-red-hat-ansible": {
-    "title": "The Transformation of IBM Z Today & The Future With Red Hat",
-    "description": "Transform your IT automation with Red Hat Ansible. Explore the power of open-source automation.",
+    "title": "IBM Z Mainframes Today & the Future with Red Hat Ansible",
+    "description": "How IBM Z mainframes are evolving and how Red Hat Ansible open-source automation is transforming mainframe IT operations. Insights from DataHub.",
     "canonical": "/the-transformation-of-mainframes-ibm-z-today-and-the-future-with-red-hat-ansible"
   },
   "/cloud-native-applications": {
-    "title": "Cloud Native Applications | DataHub",
-    "description": "Understanding cloud native applications and their role in enterprise cloud adoption.",
+    "title": "Cloud Native Applications Explained | DataHub",
+    "description": "What cloud native applications are, why they matter and how they fit into enterprise cloud adoption strategies. Insights from DataHub.",
     "canonical": "/cloud-native-applications"
   }
 }

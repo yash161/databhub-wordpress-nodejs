@@ -13,7 +13,8 @@ const contactLimiter = rateLimit({
 
 // Contact form submission
 router.post('/contact', contactLimiter, (req, res) => {
-  const { name, email, phone, subject, message } = req.body;
+  const { email, phone, subject, message } = req.body;
+  const name = [req.body.name, req.body.lastName].filter(Boolean).join(' ');
 
   // Validation
   if (!name || !email || !message) {

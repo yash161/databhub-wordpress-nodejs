@@ -176,15 +176,16 @@ router.get('/partners', (req, res) => {
   res.render('pages/partners/partners', { title: seo.title, metaDescription: seo.description, canonicalUrl: '/partners' });
 });
 
-const partnerStubs = ['ibm', 'cisco', 'red-hat', 'vm-ware', 'aws-2', 'google-2'];
-partnerStubs.forEach(slug => {
+const partnerStubs = { 'ibm': 'IBM', 'cisco': 'Cisco', 'red-hat': 'Red Hat', 'vm-ware': 'VMware', 'aws-2': 'AWS', 'google-2': 'Google Cloud' };
+Object.keys(partnerStubs).forEach(slug => {
   router.get('/' + slug, (req, res) => {
-    const name = slug.replace(/-\d+$/, '').replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    const name = partnerStubs[slug];
     res.render('pages/partners/partner-stub', {
-      title: name + ' | DataHub',
-      metaDescription: name + ' partnership with DataHub.',
+      title: name + ' Partner | DataHub',
+      metaDescription: 'DataHub partners with ' + name + ' to deliver integrated solutions that help organizations modernize, secure, and optimize their IT environments.',
       canonicalUrl: '/' + slug,
-      partnerName: name
+      partnerName: name,
+      noindex: true
     });
   });
 });
