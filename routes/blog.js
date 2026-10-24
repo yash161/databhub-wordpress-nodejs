@@ -10,11 +10,14 @@ function getSeo(path) {
 // Blog listing
 router.get('/news-blog', (req, res) => {
   const seo = getSeo('/news-blog');
+  const activePosts = blogPosts.filter(p => new Date(p.date) >= new Date('2024-01-01'));
+  const archivedPosts = blogPosts.filter(p => new Date(p.date) < new Date('2024-01-01'));
   res.render('pages/blog/index', {
     title: seo.title,
     metaDescription: seo.description,
     canonicalUrl: '/news-blog',
-    posts: blogPosts
+    posts: activePosts,
+    archivedPosts: archivedPosts
   });
 });
 

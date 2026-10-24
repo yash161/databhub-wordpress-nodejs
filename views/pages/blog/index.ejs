@@ -8,13 +8,35 @@
 <section class="page-content">
   <div class="container">
     <div class="blog-grid">
-      <% posts.forEach(function(post) { %>
+      <% (typeof posts !== 'undefined' ? posts : []).forEach(function(post) { %>
       <div class="blog-card fade-in">
         <div class="blog-card-body">
           <div class="blog-card-date"><%= new Date(post.date).toLocaleDateString('en-US', {year: 'numeric', month: 'long', day: 'numeric'}) %></div>
           <h4><a href="/<%= post.slug %>"><%= post.title %></a></h4>
           <p><%= post.excerpt.replace(/&amp;/g,'&').replace(/&nbsp;/g,' ').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&#\d+;/g,'') %></p>
           <a href="/<%= post.slug %>" class="read-more">Read More →</a>
+        </div>
+      </div>
+      <% }); %>
+    </div>
+  </div>
+</section>
+
+<!-- Section Divider -->
+<div class="section-divider"></div>
+
+<!-- Archived Blogs Section -->
+<section class="page-content archived-blogs-section" style="background-color: #010117; padding: 60px 0;">
+  <div class="container">
+    <h2 style="font-family: Montserrat, Helvetica, Arial, sans-serif; font-weight: 700; font-size: 36px; line-height: 1.2; color: #0A65FF; margin-bottom: 30px;">Archived Blogs</h2>
+    <div class="blog-grid" style="padding-top: 0;">
+      <% (typeof archivedPosts !== 'undefined' ? archivedPosts : []).forEach(function(post) { %>
+      <div class="blog-card fade-in" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(10, 101, 255, 0.15);">
+        <div class="blog-card-body">
+          <div class="blog-card-date" style="color: #0A65FF; font-family: Montserrat, Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 600; margin-bottom: 10px;"><%= new Date(post.date).toLocaleDateString('en-US', {year: 'numeric', month: 'long', day: 'numeric'}) %></div>
+          <h4><a href="/<%= post.slug %>" style="color: #0A65FF; font-family: Montserrat, Helvetica, Arial, sans-serif; font-weight: 700; font-size: 18px; text-decoration: none;"><%= post.title %></a></h4>
+          <p style="font-family: Montserrat, Helvetica, Arial, sans-serif; color: #ffffff; font-size: 14px; line-height: 1.6; margin-top: 10px;"><%= post.excerpt.replace(/&amp;/g,'&').replace(/&nbsp;/g,' ').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&#\d+;/g,'') %></p>
+          <a href="/<%= post.slug %>" class="read-more" style="color: #0A65FF; font-family: Montserrat, Helvetica, Arial, sans-serif; font-weight: 600; display: inline-block; margin-top: 15px;">Read More →</a>
         </div>
       </div>
       <% }); %>
