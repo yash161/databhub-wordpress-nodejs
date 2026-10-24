@@ -22,6 +22,11 @@ router.get('/our-mission', (req, res) => {
   res.render('pages/about/our-mission', { title: seo.title, metaDescription: seo.description, canonicalUrl: '/our-mission' });
 });
 
+router.get(['/about-us', '/about'], (req, res) => {
+  const seo = getSeo('/our-mission');
+  res.render('pages/about/our-mission', { title: 'About Us | DataHub - Where Data Meets Innovation', metaDescription: seo.description, canonicalUrl: '/our-mission' });
+});
+
 router.get('/core-values', (req, res) => {
   const seo = getSeo('/core-values');
   res.render('pages/about/core-values', { title: seo.title, metaDescription: seo.description, canonicalUrl: '/core-values' });
