@@ -87,13 +87,21 @@ app.use((req, res) => {
 
 // Error handler
 app.use((err, req, res, next) => {
-  console.error('Server error:', err.stack);
-  res.status(500).render('errors/404', {
-    title: 'Server Error - DataHub',
-    metaDescription: '',
-    canonicalUrl: '',
-    noindex: true
-  });
+  console.error('Server error:', err);
+  if (process.env.NODE_ENV !== 'production') {
+    res.status(500).send(`<h1>Server Error</h1><pre>${err.stack || err}</pre>`);
+  } else {
+    try {
+      res.status(500).render('errors/404', {
+        title: 'Server Error - DataHub',
+        metaDescription: '',
+        canonicalUrl: '',
+        noindex: true
+      });
+    } catch (renderErr) {
+      res.status(500).send(`<h1>Server Error</h1><p>Something went wrong. Please try again later.</p>`);
+    }
+  }
 });
 
 if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
