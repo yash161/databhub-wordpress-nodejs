@@ -10,8 +10,8 @@ const legacyRedirects = {
   '/blog': '/news-blog',
   '/news': '/news-blog',
   '/healthcare': '/healthcare-3',
-  '/about': '/our-team',
-  '/about-us': '/our-team'
+  '/about': '/our-mission',
+  '/about-us': '/our-mission'
 };
 
 // 301 trailing-slash URLs (old WordPress format) and legacy slugs to one canonical URL
