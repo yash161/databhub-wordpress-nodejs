@@ -30,7 +30,7 @@ router.use((req, res, next) => {
 router.get('/robots.txt', (req, res) => {
   res.setHeader('Cache-Control', 'public, max-age=86400, s-maxage=604800, stale-while-revalidate=2592000');
   res.type('text/plain');
-  const siteUrl = process.env.SITE_URL || 'https://datahubusa.com';
+  const siteUrl = process.env.SITE_URL || 'https://www.datahubusa.com';
   res.send(`User-agent: *
 Allow: /
 Disallow: /api/
@@ -42,7 +42,7 @@ Sitemap: ${siteUrl}/sitemap.xml
 // sitemap.xml (indexable pages only)
 router.get('/sitemap.xml', (req, res) => {
   res.setHeader('Cache-Control', 'public, max-age=86400, s-maxage=604800, stale-while-revalidate=2592000');
-  const siteUrl = process.env.SITE_URL || 'https://datahubusa.com';
+  const siteUrl = process.env.SITE_URL || 'https://www.datahubusa.com';
   const postDates = {};
   blogPosts.forEach(post => { postDates['/' + post.slug] = String(post.date).split(' ')[0]; });
 

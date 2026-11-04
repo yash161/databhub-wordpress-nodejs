@@ -1,0 +1,575 @@
+{
+  "/riskgrc": {
+    "service": "Governance, Risk and Compliance Consulting",
+    "sections": [
+      { "h": "What is governance, risk and compliance (GRC)?", "p": [
+        "GRC is the way an organization sets direction, manages risk and meets its legal and regulatory duties as one connected program. Governance decides who is accountable. Risk management identifies what could go wrong. Compliance shows that rules are being followed.",
+        "When these three run in separate teams and spreadsheets, the same controls get tested several times and gaps go unnoticed. A unified program gives leaders one view of risk and reduces duplicate work."
+      ] },
+      { "h": "How a GRC program usually comes together", "items": [
+        "Agree a common risk framework and shared definitions across the business",
+        "Build an inventory of regulations, risks and the controls that address them",
+        "Assign clear owners for each control and test them on a set schedule",
+        "Use a GRC platform such as IBM OpenPages to replace scattered spreadsheets",
+        "Report risk and compliance status to leadership in one consistent format"
+      ] },
+      { "p": [ "DataHub supports each stage, from advisory and framework design through technology enablement. Start with one area below, or talk to us about the program as a whole." ] }
+    ],
+    "related": [
+      { "label": "GRC Consulting", "url": "/grc-consulting" },
+      { "label": "Data Security", "url": "/security" },
+      { "label": "Regulatory Compliance", "url": "/regulatory-compliance-management" },
+      { "label": "GRC for Banking", "url": "/banking" }
+    ]
+  },
+  "/grc-consulting": {
+    "service": "GRC Consulting",
+    "parent": true,
+    "sections": [
+      { "h": "What does a GRC consultant do?", "p": [
+        "A GRC consultant helps an organization design, build or improve its governance, risk and compliance program. That means assessing where the program stands today, deciding what good looks like for your industry, and closing the gaps in a practical order.",
+        "Outside help is most useful when a new regulation arrives, an audit raises findings, a business grows quickly, or risk data is spread across too many tools."
+      ] },
+      { "h": "Where a GRC engagement typically starts", "items": [
+        "A maturity assessment of current policies, controls and reporting",
+        "A prioritized roadmap based on regulatory exposure and business risk",
+        "A common taxonomy so that risk, audit and compliance teams use the same language",
+        "Selection and rollout of supporting technology, where it is justified"
+      ] }
+    ],
+    "related": [
+      { "label": "Operational Risk", "url": "/operation-risk-managment" },
+      { "label": "Internal Audit", "url": "/internal-audit" },
+      { "label": "Regulatory Compliance", "url": "/regulatory-compliance-management" },
+      { "label": "All GRC Solutions", "url": "/riskgrc" }
+    ]
+  },
+  "/operation-risk-managment": {
+    "service": "Operational Risk Management",
+    "parent": true,
+    "sections": [
+      { "h": "What is operational risk management?", "p": [
+        "Operational risk is the risk of loss from failed internal processes, people and systems, or from external events. Operational risk management (ORM) is the discipline of finding those risks early, measuring them and reducing them.",
+        "The Basel framework groups loss events into seven categories: internal fraud, external fraud, employment practices and workplace safety, clients and business practices, damage to physical assets, business disruption and system failures, and execution and process management. Many organizations outside banking use the same structure."
+      ] },
+      { "h": "How the main ORM tools work together", "items": [
+        "Loss event data shows what has already gone wrong, internally and at peers",
+        "Risk and control self-assessments show where business owners see weak spots today",
+        "Key risk indicators give early warning that a risk is growing",
+        "Scenario analysis tests severe events that have not happened yet"
+      ] }
+    ],
+    "related": [
+      { "label": "Business Continuity", "url": "/business-continuity-managment" },
+      { "label": "Internal Audit", "url": "/internal-audit" },
+      { "label": "GRC for Banking", "url": "/banking" },
+      { "label": "All GRC Solutions", "url": "/riskgrc" }
+    ]
+  },
+  "/it-governance": {
+    "service": "IT Governance Consulting",
+    "parent": true,
+    "sections": [
+      { "h": "What is IT governance?", "p": [
+        "IT governance is the set of decisions, roles and controls that make sure technology spending supports business goals and that IT risk stays within agreed limits. It answers who decides, who is accountable and how results are measured.",
+        "It differs from IT management. Management runs technology day to day, while governance sets direction and checks that it is being followed."
+      ] },
+      { "h": "How common IT governance frameworks fit together", "items": [
+        "COBIT, from ISACA, covers overall governance and management objectives",
+        "ITIL guides how IT services are designed and delivered",
+        "ISO/IEC 27001 sets requirements for an information security management system",
+        "NIST Cybersecurity Framework 2.0 added a dedicated Govern function in 2024"
+      ] },
+      { "p": [ "Few organizations need all of these in full. The right mix depends on your regulators, your customers' expectations and your current maturity." ] }
+    ],
+    "related": [
+      { "label": "Data Security", "url": "/security" },
+      { "label": "Internal Audit", "url": "/internal-audit" },
+      { "label": "GRC Consulting", "url": "/grc-consulting" },
+      { "label": "All GRC Solutions", "url": "/riskgrc" }
+    ]
+  },
+  "/internal-audit": {
+    "service": "Internal Audit Services",
+    "parent": true,
+    "sections": [
+      { "h": "What does internal audit do?", "p": [
+        "Internal audit gives boards and senior leaders independent assurance that governance, risk management and internal controls are working. It reports on what is effective, what is not, and whether earlier findings were actually fixed.",
+        "In the widely used Three Lines Model, business teams own risk, risk and compliance functions oversee it, and internal audit independently checks both. The Institute of Internal Auditors' Global Internal Audit Standards took effect in January 2025 and are a useful benchmark for any function."
+      ] },
+      { "h": "What makes an audit plan risk-based", "items": [
+        "Audit effort goes to the highest risks, not the same areas every year",
+        "The plan changes when the business, its systems or its regulations change",
+        "Technology, cybersecurity and third-party risks sit alongside financial topics",
+        "Findings are tracked through to remediation and reported to the audit committee"
+      ] }
+    ],
+    "related": [
+      { "label": "Financial Controls", "url": "/financial-control-management" },
+      { "label": "IT Governance", "url": "/it-governance" },
+      { "label": "Operational Risk", "url": "/operation-risk-managment" },
+      { "label": "All GRC Solutions", "url": "/riskgrc" }
+    ]
+  },
+  "/financial-control-management": {
+    "service": "Financial Control Management",
+    "parent": true,
+    "sections": [
+      { "h": "What is financial control management?", "p": [
+        "Financial control management is the set of policies and checks that keep financial reporting accurate, protect assets and reduce the risk of fraud. Examples include approval limits, account reconciliations and separating who can create a payment from who can release it.",
+        "For US public companies, the Sarbanes-Oxley Act makes this a legal duty. Section 302 requires the CEO and CFO to certify financial reports. Section 404 requires management to assess internal control over financial reporting, with auditor attestation for larger filers."
+      ] },
+      { "h": "The COSO framework behind most control programs", "p": [ "Most programs are built on the COSO Internal Control framework, which has five components:" ], "items": [
+        "Control environment: the tone and accountability set by leadership",
+        "Risk assessment: identifying what could cause a material misstatement",
+        "Control activities: the actual checks, approvals and reconciliations",
+        "Information and communication: getting the right data to the right people",
+        "Monitoring: testing that controls keep working over time"
+      ] }
+    ],
+    "related": [
+      { "label": "Internal Audit", "url": "/internal-audit" },
+      { "label": "Regulatory Compliance", "url": "/regulatory-compliance-management" },
+      { "label": "Financial Services", "url": "/financial-services" },
+      { "label": "All GRC Solutions", "url": "/riskgrc" }
+    ]
+  },
+  "/data-privacy": {
+    "service": "Data Privacy Consulting",
+    "parent": true,
+    "sections": [
+      { "h": "What is the difference between data privacy and data security?", "p": [
+        "Data privacy is about whether you should collect and use personal data, and on what terms. Data security is about protecting that data from unauthorized access. A company can have strong security and still break privacy law by using data without a valid basis.",
+        "The stakes are significant. GDPR fines can reach 20 million euros or 4% of global annual turnover, whichever is higher, and GDPR generally requires personal data breaches to be reported to regulators within 72 hours."
+      ] },
+      { "h": "What a working privacy program includes", "items": [
+        "A map of what personal data you hold, where it lives and who receives it",
+        "A documented legal basis or consent record for each use",
+        "A repeatable process for access and deletion requests",
+        "Privacy impact assessments before new systems or uses go live",
+        "Retention rules so that data is not kept longer than needed",
+        "A breach response plan that meets each regulator's deadlines"
+      ] }
+    ],
+    "related": [
+      { "label": "Data Security", "url": "/security" },
+      { "label": "Regulatory Compliance", "url": "/regulatory-compliance-management" },
+      { "label": "Healthcare & HIPAA", "url": "/healthcare-3" },
+      { "label": "All GRC Solutions", "url": "/riskgrc" }
+    ]
+  },
+  "/business-continuity-managment": {
+    "service": "Business Continuity Management",
+    "parent": true,
+    "sections": [
+      { "h": "What is business continuity management?", "p": [
+        "Business continuity management (BCM) is how an organization prepares to keep critical services running through a disruption and recover afterward. ISO 22301 is the main international standard for it.",
+        "Business continuity and disaster recovery are related but different. Disaster recovery restores IT systems and data, while business continuity also covers people, sites, suppliers and customer communication."
+      ] },
+      { "h": "How a BCM program is built", "items": [
+        "A business impact analysis ranks processes by the harm caused if they stop",
+        "Recovery time objectives (RTO) set how quickly each process must return",
+        "Recovery point objectives (RPO) set how much data loss is acceptable",
+        "Plans cover staff, sites, systems and critical third parties",
+        "Regular exercises show whether the plans work, and results feed back into them"
+      ] }
+    ],
+    "related": [
+      { "label": "Operational Risk", "url": "/operation-risk-managment" },
+      { "label": "Cloud Adoption", "url": "/cloud-adoption" },
+      { "label": "Data Security", "url": "/security" },
+      { "label": "All GRC Solutions", "url": "/riskgrc" }
+    ]
+  },
+  "/regulatory-compliance-management": {
+    "service": "Regulatory Compliance Management",
+    "parent": true,
+    "sections": [
+      { "h": "What is regulatory compliance management?", "p": [
+        "Regulatory compliance management is the ongoing process of knowing which rules apply to your business, connecting them to specific controls, and being able to prove those controls work. It is a continuous program, not a one-time project, because regulations keep changing.",
+        "The main challenge is often volume. One control can satisfy several regulations, so mapping requirements to a common control set avoids testing the same thing repeatedly."
+      ] },
+      { "h": "The compliance management cycle", "items": [
+        "Identify: keep an inventory of laws, rules and standards that apply to you",
+        "Assess: find the gaps between each requirement and current practice",
+        "Map: link each requirement to an owned control",
+        "Test: check that controls work and keep the evidence",
+        "Monitor: track regulatory changes and update controls before deadlines"
+      ] }
+    ],
+    "related": [
+      { "label": "GRC Consulting", "url": "/grc-consulting" },
+      { "label": "Data Privacy", "url": "/data-privacy" },
+      { "label": "Financial Services", "url": "/financial-services" },
+      { "label": "All GRC Solutions", "url": "/riskgrc" }
+    ]
+  },
+  "/security": {
+    "service": "Enterprise Data Security Services",
+    "sections": [
+      { "h": "What is zero trust security?", "p": [
+        "Zero trust is a security model that assumes no user or device is safe by default, even inside the company network. Every access request is checked against identity, device health and context. NIST SP 800-207 is the main reference architecture.",
+        "It matters because data now sits across cloud services, remote devices and partners, so a single network perimeter no longer protects it."
+      ] },
+      { "h": "Where to start improving enterprise security", "items": [
+        "Find and classify your most sensitive data, so that protection follows value",
+        "Strengthen identity first: single sign-on, multi-factor authentication and privileged access control",
+        "Centralize logs and alerts, so that threats are seen and acted on quickly",
+        "Check cloud configurations continuously, since misconfiguration is a common cause of exposure",
+        "Rehearse incident response before you need it"
+      ] }
+    ],
+    "related": [
+      { "label": "Data Privacy", "url": "/data-privacy" },
+      { "label": "Cloud Adoption", "url": "/cloud-adoption" },
+      { "label": "GRC Solutions", "url": "/riskgrc" },
+      { "label": "Banking Security", "url": "/banking" }
+    ]
+  },
+  "/analytics": {
+    "service": "Data Analytics Services",
+    "sections": [
+      { "h": "What is the difference between predictive and prescriptive analytics?", "p": [
+        "Predictive analytics estimates what is likely to happen, using historical data and statistical or machine learning models. Prescriptive analytics goes a step further and recommends what to do about it, by weighing options against goals and constraints.",
+        "Both build on simpler layers. Descriptive analytics reports what happened, and diagnostic analytics explains why."
+      ] },
+      { "h": "What makes an analytics project succeed", "items": [
+        "Start with one business decision to improve, not with the data",
+        "Agree shared definitions, so that everyone's numbers match",
+        "Fix data quality at the source rather than in each report",
+        "Build models that can be explained to the people who act on them",
+        "Measure results after launch and retrain models as conditions change"
+      ] }
+    ],
+    "related": [
+      { "label": "AI/ML Problem Solving", "url": "/problem-solving" },
+      { "label": "Cloud Adoption", "url": "/cloud-adoption" },
+      { "label": "Financial Services", "url": "/financial-services" },
+      { "label": "Retail Analytics", "url": "/retail" }
+    ]
+  },
+  "/cloud-adoption": {
+    "service": "Cloud Adoption and Migration Services",
+    "sections": [
+      { "h": "What is hybrid cloud?", "p": [
+        "Hybrid cloud combines on-premises systems or private cloud with one or more public clouds, managed as a connected environment. Organizations choose it when some workloads must stay close to existing systems or under tighter control, while others benefit from public cloud scale.",
+        "It differs from multi-cloud, which means using more than one public cloud provider. Many enterprises do both."
+      ] },
+      { "h": "How to decide what happens to each workload", "p": [ "Migration planning usually sorts each application into one of six options:" ], "items": [
+        "Rehost: move it as is",
+        "Replatform: make small changes to benefit from the cloud",
+        "Refactor: redesign it as cloud-native",
+        "Repurchase: replace it with a SaaS product",
+        "Retain: keep it where it is for now",
+        "Retire: switch it off"
+      ] },
+      { "p": [ "Security, compliance and cost controls should be designed in from the start. Adding them after migration is usually slower and more expensive." ] }
+    ],
+    "related": [
+      { "label": "Hybrid Cloud with Red Hat", "url": "/hybrid-cloud-with-red-hat" },
+      { "label": "DevOps", "url": "/data-management" },
+      { "label": "Data Security", "url": "/security" },
+      { "label": "Application Development", "url": "/application-development" }
+    ]
+  },
+  "/data-management": {
+    "service": "DevOps Consulting",
+    "sections": [
+      { "h": "What is DevOps?", "p": [
+        "DevOps is a way of working that brings software development and IT operations together, using automation and shared responsibility to release software faster and more safely. It is as much about team habits as about tools.",
+        "Most improvements come from small, frequent releases. A small change is easier to test, easier to roll back and less likely to cause an outage than a large one."
+      ] },
+      { "h": "How to measure DevOps performance", "p": [ "The widely used DORA research measures software delivery with four metrics:" ], "items": [
+        "Deployment frequency: how often you release to production",
+        "Lead time for changes: how long code takes to reach production",
+        "Change failure rate: how many releases cause a problem",
+        "Time to restore service: how quickly you recover when something breaks"
+      ] },
+      { "p": [ "Measure these first, then automate the slowest step in your delivery pipeline." ] }
+    ],
+    "related": [
+      { "label": "Application Development", "url": "/application-development" },
+      { "label": "Hybrid Cloud with Red Hat", "url": "/hybrid-cloud-with-red-hat" },
+      { "label": "Cloud Adoption", "url": "/cloud-adoption" },
+      { "label": "Cloud Native Applications", "url": "/cloud-native-applications" }
+    ]
+  },
+  "/problem-solving": {
+    "service": "AI and Machine Learning Consulting",
+    "sections": [
+      { "h": "When is AI or machine learning the right answer?", "p": [
+        "Machine learning fits problems where patterns are too complex for fixed rules, enough good historical data exists, and an imperfect answer is still useful. Examples include forecasting demand, flagging likely fraud and routing documents.",
+        "It is often the wrong tool when a simple rule would work, when data is scarce or unreliable, or when every decision must be exactly right and fully explainable."
+      ] },
+      { "h": "Questions to answer before starting an AI project", "items": [
+        "Which decision or process will change, and who owns it?",
+        "How will success be measured, and what is the baseline today?",
+        "Is the required data available, accurate and allowed to be used?",
+        "What happens when the model is wrong, and who reviews its output?",
+        "How will the model be monitored and updated after launch?"
+      ] }
+    ],
+    "related": [
+      { "label": "Analytics", "url": "/analytics" },
+      { "label": "Application Development", "url": "/application-development" },
+      { "label": "Manufacturing AI", "url": "/manufacturing" },
+      { "label": "Transformation Hub", "url": "/transformation-hub" }
+    ]
+  },
+  "/application-development": {
+    "service": "Custom Application Development",
+    "sections": [
+      { "h": "Should you rebuild or modernize a legacy application?", "p": [
+        "Most organizations should modernize in stages rather than rewrite everything at once. Full rewrites are risky because the old system often contains business rules that nobody has written down.",
+        "A common approach is the strangler fig pattern: new services gradually take over functions from the old application until it can be switched off. A rewrite makes more sense when the platform is no longer supported or the system is small enough to replace safely."
+      ] },
+      { "h": "What modern application architecture usually includes", "items": [
+        "Well-defined APIs, so that systems can change independently",
+        "Containers, so that software runs the same way in every environment",
+        "Automated testing and deployment pipelines",
+        "Built-in logging and monitoring",
+        "Security checks during development, not only before release"
+      ] }
+    ],
+    "related": [
+      { "label": "DevOps", "url": "/data-management" },
+      { "label": "Cloud Adoption", "url": "/cloud-adoption" },
+      { "label": "IBM i Modernization", "url": "/ibm-i-as400" },
+      { "label": "Cloud Native Applications", "url": "/cloud-native-applications" }
+    ]
+  },
+  "/ibm-i-as400": {
+    "service": "IBM i (AS/400) Support and Modernization",
+    "sections": [
+      { "h": "Is IBM i the same as AS/400?", "p": [
+        "Largely, yes. IBM launched the AS/400 in 1988, and the platform was later renamed iSeries, then System i. Its operating system is now called IBM i and runs on IBM Power servers. Many people still say AS/400, so the names are often used interchangeably.",
+        "IBM i remains actively developed. Many companies still run core business systems on it because it is stable and tightly integrated, so moving off it is not always the best choice."
+      ] },
+      { "h": "How to modernize IBM i without replacing it", "items": [
+        "Replace green-screen interfaces with web and mobile front ends",
+        "Expose RPG and COBOL business logic through REST APIs",
+        "Move toward modular code and SQL access to Db2 for i",
+        "Connect to cloud services for analytics, backup and disaster recovery",
+        "Plan for skills, since experienced IBM i developers are increasingly hard to find"
+      ] }
+    ],
+    "related": [
+      { "label": "IBM Power", "url": "/ibm-power" },
+      { "label": "Application Development", "url": "/application-development" },
+      { "label": "Cloud Adoption", "url": "/cloud-adoption" },
+      { "label": "Business Continuity", "url": "/business-continuity-managment" }
+    ]
+  },
+  "/ibm-power": {
+    "service": "IBM Power Systems Services",
+    "sections": [
+      { "h": "What are IBM Power Systems used for?", "p": [
+        "IBM Power is a server platform built for demanding, business-critical workloads such as SAP HANA, large Oracle databases and core banking or ERP systems. It runs AIX, IBM i and Linux, often side by side on one server using PowerVM virtualization.",
+        "Organizations often choose it for reliability and for consolidating many workloads onto fewer servers, which can also affect per-core software licensing costs."
+      ] },
+      { "h": "What to review when planning an IBM Power upgrade or migration", "items": [
+        "Current and forecast utilization, so that new capacity is sized correctly",
+        "Operating system and firmware support dates",
+        "Software licensing impact of the new configuration",
+        "High availability and disaster recovery targets",
+        "Whether IBM Power Virtual Server suits some workloads in the cloud"
+      ] }
+    ],
+    "related": [
+      { "label": "IBM i (AS/400)", "url": "/ibm-i-as400" },
+      { "label": "Hybrid Cloud with Red Hat", "url": "/hybrid-cloud-with-red-hat" },
+      { "label": "Cloud Adoption", "url": "/cloud-adoption" },
+      { "label": "Technology Partners", "url": "/partners" }
+    ]
+  },
+  "/hybrid-cloud-with-red-hat": {
+    "service": "Red Hat Hybrid Cloud Consulting",
+    "sections": [
+      { "h": "What do OpenShift and Ansible each do?", "p": [
+        "Red Hat OpenShift is an enterprise application platform built on Kubernetes. It runs containerized applications consistently across data centers and public clouds. Red Hat Ansible Automation Platform automates repetitive IT work, such as provisioning, configuration and patching, using readable playbooks.",
+        "They solve different problems and work well together. OpenShift gives applications a portable place to run, while Ansible automates the infrastructure and operations around them."
+      ] },
+      { "h": "Good first steps with Red Hat automation and containers", "items": [
+        "Automate one frequent, low-risk task with Ansible to prove the value",
+        "Pick a suitable application as the first OpenShift workload",
+        "Set standards for security, access and image management early",
+        "Connect the platform to your CI/CD pipeline",
+        "Train the teams who will run it, not only those who install it"
+      ] }
+    ],
+    "related": [
+      { "label": "Cloud Adoption", "url": "/cloud-adoption" },
+      { "label": "DevOps", "url": "/data-management" },
+      { "label": "IBM Z and Ansible", "url": "/the-transformation-of-mainframes-ibm-z-today-and-the-future-with-red-hat-ansible" },
+      { "label": "Technology Partners", "url": "/partners" }
+    ]
+  },
+  "/banking": {
+    "sections": [
+      { "h": "What are the biggest technology priorities for banks?", "p": [
+        "Banks need to modernize digital services while protecting customer data and meeting heavy regulation, often on top of decades-old core systems. Most technology decisions have to balance customer experience, risk and cost at the same time.",
+        "Data sits at the center of all three. Reliable, well-governed data supports fraud detection, regulatory reporting and more personal digital services."
+      ] },
+      { "h": "Regulations shaping bank IT programs", "items": [
+        "Basel III: capital, liquidity and risk reporting requirements",
+        "Bank Secrecy Act and AML/KYC rules: customer checks and transaction monitoring",
+        "GLBA: protection of customer financial information in the US",
+        "FFIEC guidance: how US examiners assess IT and cybersecurity",
+        "PCI DSS: security standards for payment card data"
+      ] }
+    ],
+    "related": [
+      { "label": "GRC Solutions", "url": "/riskgrc" },
+      { "label": "Data Security", "url": "/security" },
+      { "label": "Analytics", "url": "/analytics" },
+      { "label": "Operational Risk", "url": "/operation-risk-managment" }
+    ]
+  },
+  "/healthcare-3": {
+    "sections": [
+      { "h": "What does HIPAA require for IT security?", "p": [
+        "The HIPAA Security Rule requires covered entities and their business associates to protect electronic protected health information (ePHI) with administrative, physical and technical safeguards. A documented risk analysis is required and is a common starting point for any compliance review.",
+        "The Privacy Rule governs how patient information may be used and shared. The Breach Notification Rule sets when patients and regulators must be told about a breach."
+      ] },
+      { "h": "A practical HIPAA security checklist", "items": [
+        "Complete and regularly update a risk analysis covering all systems holding ePHI",
+        "Limit access by role and review it regularly",
+        "Encrypt ePHI in storage and in transit where appropriate",
+        "Keep audit logs of who accessed patient records",
+        "Sign business associate agreements with vendors handling ePHI",
+        "Test backups and maintain an incident response plan"
+      ] }
+    ],
+    "related": [
+      { "label": "Data Privacy", "url": "/data-privacy" },
+      { "label": "Data Security", "url": "/security" },
+      { "label": "Analytics", "url": "/analytics" },
+      { "label": "Cloud Adoption", "url": "/cloud-adoption" }
+    ]
+  },
+  "/insurance": {
+    "sections": [
+      { "h": "How is technology changing the insurance industry?", "p": [
+        "Insurers are moving away from legacy policy systems so they can launch products faster, process claims with less manual work and price risk using better data. Customers increasingly expect the same digital service from insurers as from banks and retailers.",
+        "The data behind these changes is often highly sensitive, which makes security and governance part of every modernization project."
+      ] },
+      { "h": "Security and compliance rules insurers should know", "items": [
+        "NAIC Insurance Data Security Model Law: adopted by many US states, requires an information security program",
+        "NYDFS Part 500: cybersecurity requirements for financial services firms licensed in New York",
+        "Solvency II: EU capital, governance and reporting requirements",
+        "State privacy and rate rules: these vary, so requirements need mapping state by state"
+      ] }
+    ],
+    "related": [
+      { "label": "Regulatory Compliance", "url": "/regulatory-compliance-management" },
+      { "label": "Data Security", "url": "/security" },
+      { "label": "Analytics", "url": "/analytics" },
+      { "label": "Application Development", "url": "/application-development" }
+    ]
+  },
+  "/energy": {
+    "sections": [
+      { "h": "Why is operational technology security different for energy companies?", "p": [
+        "Operational technology (OT), including SCADA and industrial control systems, runs physical equipment. A failure can affect safety and supply as well as data, and these systems often cannot be patched or restarted as easily as office IT.",
+        "As grids and plants connect more sensors and cloud analytics, the separation between IT and OT networks shrinks. That brings operational benefits, but it also creates new paths for attackers."
+      ] },
+      { "h": "Standards that shape energy cybersecurity", "items": [
+        "NERC CIP: mandatory requirements for the North American bulk electric system",
+        "IEC 62443: international standards for industrial automation and control security",
+        "NIST SP 800-82: US guidance on securing operational technology",
+        "TSA pipeline security directives: requirements for designated US pipeline operators"
+      ] }
+    ],
+    "related": [
+      { "label": "Data Security", "url": "/security" },
+      { "label": "Analytics", "url": "/analytics" },
+      { "label": "Business Continuity", "url": "/business-continuity-managment" },
+      { "label": "Manufacturing", "url": "/manufacturing" }
+    ]
+  },
+  "/manufacturing": {
+    "sections": [
+      { "h": "What is Industry 4.0 in manufacturing?", "p": [
+        "Industry 4.0 is the use of connected sensors, data and AI to make factories more automated and responsive. Machines report their condition in real time, so teams can predict failures, catch quality problems sooner and adjust production to demand.",
+        "The best first projects are usually narrow. One production line with a clear downtime or scrap problem can prove the value before wider investment."
+      ] },
+      { "h": "How to secure a connected factory", "items": [
+        "Keep an inventory of every connected machine and controller",
+        "Separate factory networks from office networks",
+        "Control and log remote access by equipment vendors",
+        "Plan patching around production schedules",
+        "Use IEC 62443 and NIST SP 800-82 as reference guides",
+        "Check CMMC requirements if you supply the US Department of Defense"
+      ] }
+    ],
+    "related": [
+      { "label": "AI/ML Problem Solving", "url": "/problem-solving" },
+      { "label": "Analytics", "url": "/analytics" },
+      { "label": "Data Security", "url": "/security" },
+      { "label": "Energy & Industrial", "url": "/energy" }
+    ]
+  },
+  "/retail": {
+    "sections": [
+      { "h": "What does omnichannel retail require from IT?", "p": [
+        "Omnichannel retail means customers can browse, buy and return across stores, websites and apps without friction. To make that work, inventory, pricing, orders and customer profiles need to be accurate and shared across every channel in near real time.",
+        "Most of the difficulty is in integration. Many problems come from older point-of-sale, e-commerce and warehouse systems that were never designed to share data."
+      ] },
+      { "h": "Security and data priorities for retailers", "items": [
+        "PCI DSS: required security standards for handling payment card data",
+        "Privacy laws such as CCPA/CPRA: rules on how customer data is collected and used",
+        "Customer account protection against credential stuffing and fraud",
+        "One source of inventory data to support accurate forecasting",
+        "Vendor reviews for third-party apps and payment providers"
+      ] }
+    ],
+    "related": [
+      { "label": "Analytics", "url": "/analytics" },
+      { "label": "Data Security", "url": "/security" },
+      { "label": "Data Privacy", "url": "/data-privacy" },
+      { "label": "Application Development", "url": "/application-development" }
+    ]
+  },
+  "/financial-services": {
+    "sections": [
+      { "h": "What do broker-dealers and investment advisers need from their technology?", "p": [
+        "They need reliable data, strong security and records that stand up to regulators. Broker-dealers and registered investment advisers answer to different rules but share the same basic needs: protect client information, supervise activity and retain evidence.",
+        "Data and AI can improve research, risk analysis and surveillance, but only with clear governance over how models and client data are used."
+      ] },
+      { "h": "Regulations shaping financial services IT", "items": [
+        "SEC Regulation S-P: safeguarding customer information, including incident response requirements",
+        "SEC cybersecurity disclosure rules: reporting material incidents for public companies",
+        "FINRA rules: supervision and recordkeeping for broker-dealers",
+        "MiFID II: transparency and reporting rules for EU investment firms",
+        "AML programs: customer checks and suspicious activity monitoring"
+      ] }
+    ],
+    "related": [
+      { "label": "Financial Controls", "url": "/financial-control-management" },
+      { "label": "Regulatory Compliance", "url": "/regulatory-compliance-management" },
+      { "label": "Analytics", "url": "/analytics" },
+      { "label": "Banking", "url": "/banking" }
+    ]
+  },
+  "/tellcumacation": {
+    "sections": [
+      { "h": "Why is data central to modern telecom networks?", "p": [
+        "Networks produce huge volumes of telemetry, and 5G and connected devices add much more. Telecom operators use this data to detect faults before customers notice them, plan capacity and reduce churn.",
+        "Edge computing and network slicing also make networks more software-driven. This makes automation and observability more important, and it changes where security controls need to sit."
+      ] },
+      { "h": "Security and compliance priorities for telecom operators", "items": [
+        "Protect customer proprietary network information (CPNI), as US FCC rules require",
+        "Secure the network core and signaling, not only customer-facing systems",
+        "Monitor the large numbers of connected IoT devices",
+        "Review suppliers across the network equipment supply chain",
+        "Audit billing and usage data to detect fraud and revenue leakage"
+      ] }
+    ],
+    "related": [
+      { "label": "Data Security", "url": "/security" },
+      { "label": "Analytics", "url": "/analytics" },
+      { "label": "Cloud Adoption", "url": "/cloud-adoption" },
+      { "label": "AI/ML Problem Solving", "url": "/problem-solving" }
+    ]
+  }
+}

@@ -52,12 +52,15 @@ app.set('layout', 'layouts/main');
 // Load shared data for all views
 const navigation = require('./data/navigation.json');
 const seoData = require('./data/seo.json');
+const pageContent = require('./data/page-content.json');
 
 app.use((req, res, next) => {
   res.locals.navigation = navigation;
   res.locals.seoData = seoData;
+  res.locals.pageContent = pageContent;
   res.locals.currentPath = req.path;
-  res.locals.siteUrl = process.env.SITE_URL || 'https://datahubusa.com';
+  // The live site is served on www; the bare domain only redirects there
+  res.locals.siteUrl = (process.env.SITE_URL || 'https://www.datahubusa.com').replace('://datahubusa.com', '://www.datahubusa.com');
   res.locals.gaTrackingId = process.env.GA_TRACKING_ID || '';
   next();
 });

@@ -1,0 +1,25 @@
+<% var details = pageContent[currentPath]; %>
+<% if (details) { %>
+<!-- Extra page content and related links (edit in data/page-content.json) -->
+<section class="page-details">
+  <div class="container">
+    <div class="grc-content">
+      <% details.sections.forEach(function(section) { %>
+        <% if (section.h) { %><h2><%= section.h %></h2><% } %>
+        <% (section.p || []).forEach(function(paragraph) { %><p><%= paragraph %></p><% }); %>
+        <% if (section.items) { %>
+        <ul>
+          <% section.items.forEach(function(item) { %><li><%= item %></li><% }); %>
+        </ul>
+        <% } %>
+      <% }); %>
+    </div>
+    <h2 class="page-details-related">Related services</h2>
+    <div class="grc-nav page-details-links">
+      <% details.related.forEach(function(link) { %>
+      <div class="grc-nav-card"><a href="<%= link.url %>"><%= link.label %></a></div>
+      <% }); %>
+    </div>
+  </div>
+</section>
+<% } %>
