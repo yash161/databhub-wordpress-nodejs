@@ -1,5 +1,54 @@
 # SEO & Lead Generation Report
 
+## Round 2: canonical address, page speed and content
+
+Branch: `seo/canonical-images-and-content`
+
+This round fixes one critical indexing problem, removes most of the page weight from banners and the homepage video, and adds real content to the 26 thinnest service and industry pages.
+
+### Fixes
+
+| Priority | Problem found | Fix |
+|---|---|---|
+| Critical | Every page's canonical tag, `og:url` and structured data pointed to `https://datahubusa.com/...`, which redirects to `www`, while the sitemap used `www`. Google received conflicting signals on every page. | All of them now use `https://www.datahubusa.com`, including when `SITE_URL` in Vercel is still set to the bare domain. |
+| High | Banners loaded full-size originals up to 15.9 MB (`governance.jpg` at 7.2 MB on 9 GRC pages). | Switched to the smaller versions already in the repo, typically 120–360 KB, on 25 templates. |
+| High | The homepage video was 50 MB and autoplayed. | Re-encoded to 5 MB at the same 720p size and added a 128 KB poster image. The unused audio track was removed (the banner plays muted). |
+| High | Service and industry pages had about 100 words each. | Added 115–173 words per page on 26 pages, in `data/page-content.json`. Pages now have roughly 210–350 words. |
+| High | `/our-team` is an "Under Construction" page with 17 words, but it was indexed. | Set to noindex and removed from the sitemap until it has real bios. The menu link stays. |
+| Medium | 100 images had no `width` and `height`, which can make the page jump while loading. | Added real dimensions. Logo rows use `width: auto` so their layout does not change. |
+| Medium | Service pages had few contextual links to each other. | Added a "Related services" block with 4 links on each of the 26 pages. |
+| Medium | Search engines had no explicit description of each service. | Added `Service` structured data to 18 solution and GRC pages, and GRC breadcrumbs now read Home > Solutions > GRC > page. |
+| Low | Four homepage buttons all said "Our Capabilities". | They now name the service, e.g. "GRC Capabilities". |
+| Low | No `llms.txt`. | Added one. It is optional and Google ignores it, so expect little direct effect. |
+
+The sitemap now lists 37 URLs, with a `lastmod` date on every page whose content changed.
+
+### Needs owner review before merging
+
+The new copy in `data/page-content.json` explains each service and the regulations around it. It does not add clients, results or certifications, but it has not been reviewed by the business. Please check that it describes what DataHub actually offers, and have a compliance-minded reader check the regulatory statements. Edit the wording in that one file; no template changes are needed.
+
+### Verified
+
+- Crawled all 39 reachable pages locally: no broken links or missing images, one H1 per page, and valid structured data on the pages sampled.
+- Canonical tags use `www` with `SITE_URL` unset and with it set to the bare domain.
+- Checked images on 13 image-heavy pages: rendered proportions match their dimensions.
+- Checked the new section at desktop and phone width, with no sideways scrolling, and confirmed the new video plays.
+
+Not measured: Google PageSpeed scores, because the public API refused the request (daily quota exceeded). Run PageSpeed Insights after deploying.
+
+### Still open
+
+- **Search Console:** after deploying, resubmit the sitemap and check the Pages report for "Alternate page with proper canonical tag" and redirect errors. The canonical problem should clear over the following weeks.
+- **`SITE_URL` in Vercel:** set it to `https://www.datahubusa.com` for consistency.
+- **Google Analytics:** `GA_TRACKING_ID` is still not set on the live site, so organic leads are not being measured.
+- **Chat button on phones:** it still covers the Contact Us button, and Jim is offline because its temporary address no longer resolves.
+- **Our Team:** add real names, roles and bios, then remove the noindex. Named experts are one of the strongest trust signals available to this site.
+- **Proof and fresh content:** add client results, and publish regularly. The newest blog post is from January 2024.
+- **Animated GIFs:** several are still 0.5–2.3 MB each and should become video or WebP.
+- **Heading order:** many pages jump from H2 to H4. This is an accessibility cleanup rather than a ranking issue.
+
+## Round 1: metadata, structured data and contact paths
+
 Branch: `seo/metadata-schema-and-lead-gen`
 
 This pass improves how the site appears in Google and AI search, and makes it easier for visitors to contact DataHub. No page layouts, URLs, or business logic were rewritten. The changes are metadata, two new partials, and small additive CSS/JS.
@@ -40,7 +89,7 @@ Added `og:image`, `og:site_name`, `og:locale`, Twitter Card tags, and `article:p
 - **noindex** added to pages that shouldn't rank: the 404/500 pages, `/client-login`, `/form` (duplicate of the contact page), `/landing-page`, and the six thin partner stub pages (`/ibm`, `/aws-2`, …). They still pass link value (`noindex, follow`).
 - **Sitemap** now lists only the 38 indexable pages and adds `<lastmod>` dates to blog posts.
 - **robots.txt** now blocks `/api/`.
-- **301 redirects** for old WordPress-style trailing-slash URLs (`/our-team/` → `/our-team`), so backlinks from the old site consolidate on one URL. Common guesses are also redirected: `/contact`, `/contact-us` → `/contact-2`; `/blog`, `/news` → `/news-blog`; `/about`, `/about-us` → `/our-team`; `/healthcare` → `/healthcare-3`.
+- **301 redirects** for old WordPress-style trailing-slash URLs (`/our-team/` → `/our-team`), so backlinks from the old site consolidate on one URL. Common guesses are also redirected: `/contact`, `/contact-us` → `/contact-2`; `/blog`, `/news` → `/news-blog`; `/about`, `/about-us` → `/our-mission`; `/healthcare` → `/healthcare-3`.
 - Partner page names fixed: "Ibm", "Vm Ware", "Aws" became **IBM, VMware, AWS, Red Hat, Cisco, Google Cloud**.
 
 ### 5. Small performance and quality wins

@@ -17,7 +17,8 @@
   "/our-team": {
     "title": "Our Team | DataHub USA – Chicago IT & Data Consultants",
     "description": "Meet the DataHub team: skilled technology and IT consultants delivering GRC, security, cloud and data solutions from Chicago and London.",
-    "canonical": "/our-team"
+    "canonical": "/our-team",
+    "noindex": true
   },
   "/giving-back": {
     "title": "Giving Back | DataHub Supports St. Jude Children's Research",

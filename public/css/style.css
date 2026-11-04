@@ -1665,6 +1665,7 @@ textarea.form-control {
 }
 
 .partner-logo-item img {
+  width: auto;
   max-height: 70px;
   max-width: 85%;
   object-fit: contain;
@@ -1692,6 +1693,7 @@ textarea.form-control {
 }
 
 .tech-badge-item img {
+  width: auto;
   max-height: 55px;
   max-width: 80%;
   object-fit: contain;
@@ -1951,3 +1953,24 @@ textarea.form-control {
   }
 }
 
+
+/* --- Extra page content and related links (views/partials/page-details.ejs) --- */
+.page-details {
+  padding: 50px 0 20px;
+  border-top: 1px solid rgba(10, 101, 255, 0.15);
+}
+
+.page-details .grc-content h2 {
+  font-size: clamp(22px, 3vw, 28px);
+  margin-top: 30px;
+}
+
+.page-details-related {
+  text-align: center;
+  font-size: clamp(20px, 2.5vw, 24px);
+  margin-top: 40px;
+}
+
+.page-details-links {
+  padding: 24px 0 30px;
+}

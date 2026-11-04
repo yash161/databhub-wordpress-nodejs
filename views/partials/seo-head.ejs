@@ -9,6 +9,7 @@
   var isPost = typeof post !== 'undefined' && post;
   var ogImage = siteUrl + '/images/2023/01/Security-1080x608.jpg';
   var orgId = siteUrl + '/#organization';
+  var details = pageContent[pagePath] || {};
 
   var organization = {
     '@context': 'https://schema.org',
@@ -80,6 +81,10 @@
         });
       });
     }
+    if (details.parent) {
+      crumbs.push({ name: 'Solutions', url: null });
+      crumbs.push({ name: 'GRC', url: siteUrl + '/riskgrc' });
+    }
     crumbs.push({ name: crumbName, url: pageUrl });
   }
   var breadcrumb = {
@@ -107,6 +112,17 @@
       mainEntityOfPage: pageUrl,
       author: { '@id': orgId },
       publisher: { '@id': orgId }
+    });
+  }
+  if (details.service) {
+    schemas.push({
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      name: details.service,
+      description: pageDesc,
+      url: pageUrl,
+      provider: { '@id': orgId },
+      areaServed: ['US', 'GB']
     });
   }
   if (pagePath === '/contact-2') {
