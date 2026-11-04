@@ -19,24 +19,65 @@
   ],
   "routes": [
     {
+      "src": "/(.*)\\.php$",
+      "status": 404
+    },
+    {
+      "src": "/(wp-admin|wp-content|wp-includes|wp-json|xmlrpc|components|cgi-bin)(/.*)?",
+      "status": 404
+    },
+    {
+      "src": "/(\\.env.*|\\.git.*)",
+      "status": 404
+    },
+    {
+      "src": "/robots\\.txt",
+      "dest": "/public/robots.txt",
+      "headers": {
+        "cache-control": "public, max-age=86400, s-maxage=604800, stale-while-revalidate=2592000"
+      }
+    },
+    {
+      "src": "/sitemap\\.xml",
+      "dest": "/public/sitemap.xml",
+      "headers": {
+        "cache-control": "public, max-age=86400, s-maxage=604800, stale-while-revalidate=2592000"
+      }
+    },
+    {
       "src": "/css/(.*)",
-      "dest": "/public/css/$1"
+      "dest": "/public/css/$1",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      }
     },
     {
       "src": "/js/(.*)",
-      "dest": "/public/js/$1"
+      "dest": "/public/js/$1",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      }
     },
     {
       "src": "/images/(.*)",
-      "dest": "/public/images/$1"
+      "dest": "/public/images/$1",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      }
     },
     {
       "src": "/favicon.ico",
-      "dest": "/public/images/2022/12/cropped-logo-6-1.png"
+      "dest": "/public/images/2022/12/cropped-logo-6-1.png",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      }
     },
     {
       "src": "/jim-widget.js",
-      "dest": "/public/jim-widget.js"
+      "dest": "/public/jim-widget.js",
+      "headers": {
+        "cache-control": "public, max-age=86400, s-maxage=604800, stale-while-revalidate=2592000"
+      }
     },
     {
       "src": "/(.*)",

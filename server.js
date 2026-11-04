@@ -71,12 +71,21 @@ const pageRoutes = require('./routes/pages');
 const blogRoutes = require('./routes/blog');
 const apiRoutes = require('./routes/api');
 
+// Edge caching for public GET page routes (Vercel CDN caches for 24h, serves stale up to 7d)
+app.use((req, res, next) => {
+  if (req.method === 'GET' && !req.path.startsWith('/api')) {
+    res.setHeader('Cache-Control', 'public, max-age=0, s-maxage=86400, stale-while-revalidate=604800');
+  }
+  next();
+});
+
 app.use('/', pageRoutes);
 app.use('/', blogRoutes);
 app.use('/api', apiRoutes);
 
-// 404 handler
+// 404 handler (Edge cache 404s for 1 hour to prevent bot scanner DDoS on Lambda)
 app.use((req, res) => {
+  res.setHeader('Cache-Control', 'public, max-age=0, s-maxage=3600, stale-while-revalidate=86400');
   res.status(404).render('errors/404', {
     title: 'Page Not Found - DataHub',
     metaDescription: '',
