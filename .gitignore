@@ -33,3 +33,6 @@ data/submissions/*.jsonl
 *.sql
 wp_extracted/
 wp_analysis/
+
+# Local Netlify folder
+.netlify

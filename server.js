@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const ejs = require('ejs');
 const expressLayouts = require('express-ejs-layouts');
 const helmet = require('helmet');
 const compression = require('compression');
@@ -36,13 +37,14 @@ publicDirs.forEach(dir => {
 
 // View engine
 const fs = require('fs');
-let viewsDir = path.join(process.cwd(), 'views');
-if (!fs.existsSync(viewsDir)) {
-  viewsDir = path.join(__dirname, 'views');
-}
-if (!fs.existsSync(viewsDir)) {
-  viewsDir = path.join(__dirname, '..', 'views');
-}
+const candidateViews = [
+  path.join(process.cwd(), 'views'),
+  path.join(__dirname, 'views'),
+  path.join(__dirname, '..', 'views'),
+  path.join(__dirname, '../..', 'views'),
+  path.resolve(__dirname, '../../views')
+];
+let viewsDir = candidateViews.find(d => fs.existsSync(d)) || path.join(process.cwd(), 'views');
 
 app.set('view engine', 'ejs');
 app.set('views', viewsDir);
@@ -97,26 +99,25 @@ app.use((req, res) => {
   });
 });
 
+// Debug route
+app.get('/debug-env', (req, res) => {
+  res.json({
+    cwd: process.cwd(),
+    dirname: __dirname,
+    viewsDir: app.get('views'),
+    viewsExists: fs.existsSync(app.get('views')),
+    cwdFiles: fs.existsSync(process.cwd()) ? fs.readdirSync(process.cwd()) : [],
+    dirnameFiles: fs.existsSync(__dirname) ? fs.readdirSync(__dirname) : []
+  });
+});
+
 // Error handler
 app.use((err, req, res, next) => {
   console.error('Server error:', err);
-  if (process.env.NODE_ENV !== 'production') {
-    res.status(500).send(`<h1>Server Error</h1><pre>${err.stack || err}</pre>`);
-  } else {
-    try {
-      res.status(500).render('errors/404', {
-        title: 'Server Error - DataHub',
-        metaDescription: '',
-        canonicalUrl: '',
-        noindex: true
-      });
-    } catch (renderErr) {
-      res.status(500).send(`<h1>Server Error</h1><p>Something went wrong. Please try again later.</p>`);
-    }
-  }
+  res.status(500).send(`<h1>Server Error</h1><pre>${err.stack || err}</pre>`);
 });
 
-if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
+if (require.main === module && !process.env.NETLIFY && !process.env.VERCEL) {
   app.listen(PORT, () => {
     console.log(`DataHub USA server running on http://localhost:${PORT}`);
   });
